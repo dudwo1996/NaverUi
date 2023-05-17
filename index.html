@@ -1,0 +1,289 @@
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naver</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        #header-center {
+            display: flex;
+            width: 1130px;
+            height: 160px;
+        }
+
+        #header-logo,
+        #header-search,
+        #header-home {
+            display: inline-block;
+        }
+
+        #header-logo {
+            display: flex;
+            align-items: center;
+            width: 238px;
+            height: 100%;
+        }
+
+        #header-logo a {
+            width: 222px;
+            height: 52px;
+        }
+
+        #header-logo a::before {
+            /* display: none; // 공간마저 없애버림 */
+            /* visibility: hidden; // 공간은 차지하되 희미하게 처리 */
+            background-image: url(./sp_main.png);
+            width: 222px;
+            height: 52px;
+            content: '';
+            display: inline-block;
+            background-position: 0px -158px;
+            background-size: 442px 428px;
+            position: relative;
+            top: -6px;
+            left: -9px;
+        }
+
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+
+        #header-search {
+            display: flex;
+            align-items: center;
+            width: 586px;
+            height: 100%;
+            flex: 1;
+        }
+
+        #header-search button {
+            width: 54px;
+            height: 56px;
+            background: #19ce60;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        #header-search button:before {
+            background-image: url(./sp_main.png);
+            background-size: 442px 428px;
+            display: inline-block;
+            content: '';
+            width: 22px;
+            height: 22px;
+            background-position: -420px 0px;
+        }
+
+        #header-keyboard {
+            display: inline-flex;
+            flex: 1;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        #header-keyboard .more {
+            background-image: url(./sp_main.png);
+            background-size: 442px 428px;
+            display: inline-block;
+            content: '';
+            width: 10px;
+            height: 5px;
+            background-position: -170px -151px;
+            background-repeat: no-repeat;
+            margin-right: 14px;
+        }
+        #header-keyboard a:nth-child(1):hover .keyboard{
+            background-position: -376px -267px;
+        }
+        #header-keyboard a:nth-child(1), #header-keyboard a:nth-child(2) {
+            height: 100%;
+            display: inline-flex;
+            align-items: center;
+        }
+        #header-keyboard .keyboard {
+            background-image: url(./sp_main.png);
+            background-size: 442px 428px;
+            display: inline-block;
+            content: '';
+            width: 20px;
+            height: 12px;
+            background-position: -398px -267px;
+            background-repeat: no-repeat;
+            margin-right: 12px;
+        }
+
+        #header-search-input::placeholder {
+            color: white;
+            opacity: 1;
+            /* Firefox */
+        }
+
+        #header-home {
+            font-size: 11px;
+            color: #404040;
+            padding-top: 10px;
+        }
+        #header-home a {
+            text-decoration: none;
+            color: #404040;
+        }
+        #header-hmoe a:nth-of-type(1) {
+            position: relative;
+            top: -2px;
+        }
+        #header-home a:nth-child(1):hover{
+            text-decoration: underline;
+        }
+        #header-home a:nth-child(1)::after{
+            background-image: url(./sp_main.png);
+            background-size: 442px 428px;
+            display: inline-block;
+            content: '';
+            width: 26px;
+            height: 26px;
+            background-position: -382px -213px;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+            margin-left: 3px;
+            margin-right: -3px;
+            position: relative;
+            top: 1px;
+        }
+        /* 주니어네이버 */
+        #header-home a:nth-of-type(2):hover::after {
+            background-position: -326px -296px;
+        }
+        #header-home a:nth-of-type(2)::after {
+            background-image: url(./sp_main.png);
+            background-size: 442px 428px;
+            display: inline-block;
+            content: '';
+            display: inline-block;
+            width: 60px;
+            height: 10px;
+            background-position: -264px -296px;
+            background-repeat: no-repeat;
+            margin-right: 8px;
+            position: relative;
+            top: -1px;
+        }
+        /* 해피빈 */
+        #header-home a:nth-of-type(3):hover::after{
+            background-position: -380px -199px;
+
+        }
+        #header-home a:nth-of-type(3)::after {
+            background-image: url(./sp_main.png);
+            background-size: 442px 428px;
+            display: inline-block;
+            content: '';
+            display: inline-block;
+            width: 34px;
+            height: 11px;
+            background-position: -365px -245px;
+            background-repeat: no-repeat;
+        }
+        .sa_bar {
+            display: inline-block;
+            width: 1px;
+            height: 10px;
+            margin: 3px 6px;
+            background-color: #e4e8eb;
+            vertical-align: -2px;
+        }
+        #main {
+            height: 9999px;
+            background-color: gray;
+        }
+
+        #header-search form {
+            margin: 0;
+            display: flex;
+        }
+        #header-search form:focus-within {
+            box-shadow: 0 4px 9px 0 rgba(0, 0, 0, .05);
+        }
+
+        #header-search-wrap {
+            display: inline-flex;
+            border: 2px solid #19ce60;
+            border-radius: 2px;
+            width: 532px;
+            height: 56px;
+            background-color: #fff;
+
+        }
+        #header-search-input {
+            padding: 13px 15px;
+            outline: none;
+            border: none;
+            width: 444px;
+            height: 100%;
+            font-size: 18px;
+            line-height: 24px;
+            color: #000;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-center">
+            <div id="header-logo">
+                <a href="#">
+                    <span class="blind">로고</span>
+                </a>
+            </div>
+            <div id="header-search">
+                <form action="#">
+                    <label class="blind" for="header-search-input">검색창</label>
+                    <div id="header-search-wrap">
+                        <input id="header-search-input" placeholder="검색어를 입력해주세요." />
+                        <div id="header-keyboard">
+                            <a href="#"><i class="keyboard"><span class="blind">키보드</span></i></a>
+                            <a href="#"><i class="more"><span class="blind">더보기</span></i></a>
+                        </div>
+                    </div>
+                    <button>
+                        <span class="blind">검색</span>
+                    </button>
+                </form>
+            </div>
+            <div id="header-home">
+                <a href="#">네이버를 시작페이지로</a>
+                <i class="sa_bar"></i>
+                <a href="#"><span class="blind">주니어 네이버</span></a>
+                <a href="#"><span class="blind">해피빈</span></a>
+            </div>
+        </div>
+        <div id="main"></div>
+    </div>
+</body>
+
+</html>
