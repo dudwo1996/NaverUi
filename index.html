@@ -18,8 +18,8 @@
 
         #header {
             display: flex;
-            text-align: center;
             justify-content: center;
+            border-bottom: 1px solid #e4e8eb;
         }
 
         #header-center {
@@ -117,14 +117,18 @@
             background-repeat: no-repeat;
             margin-right: 14px;
         }
-        #header-keyboard a:nth-child(1):hover .keyboard{
+
+        #header-keyboard a:nth-child(1):hover .keyboard {
             background-position: -376px -267px;
         }
-        #header-keyboard a:nth-child(1), #header-keyboard a:nth-child(2) {
+
+        #header-keyboard a:nth-child(1),
+        #header-keyboard a:nth-child(2) {
             height: 100%;
             display: inline-flex;
             align-items: center;
         }
+
         #header-keyboard .keyboard {
             background-image: url(./sp_main.png);
             background-size: 442px 428px;
@@ -148,18 +152,22 @@
             color: #404040;
             padding-top: 10px;
         }
+
         #header-home a {
             text-decoration: none;
             color: #404040;
         }
+
         #header-hmoe a:nth-of-type(1) {
             position: relative;
             top: -2px;
         }
-        #header-home a:nth-child(1):hover{
+
+        #header-home a:nth-child(1):hover {
             text-decoration: underline;
         }
-        #header-home a:nth-child(1)::after{
+
+        #header-home a:nth-child(1)::after {
             background-image: url(./sp_main.png);
             background-size: 442px 428px;
             display: inline-block;
@@ -174,10 +182,12 @@
             position: relative;
             top: 1px;
         }
+
         /* 주니어네이버 */
         #header-home a:nth-of-type(2):hover::after {
             background-position: -326px -296px;
         }
+
         #header-home a:nth-of-type(2)::after {
             background-image: url(./sp_main.png);
             background-size: 442px 428px;
@@ -192,11 +202,13 @@
             position: relative;
             top: -1px;
         }
+
         /* 해피빈 */
-        #header-home a:nth-of-type(3):hover::after{
+        #header-home a:nth-of-type(3):hover::after {
             background-position: -380px -199px;
 
         }
+
         #header-home a:nth-of-type(3)::after {
             background-image: url(./sp_main.png);
             background-size: 442px 428px;
@@ -208,6 +220,7 @@
             background-position: -365px -245px;
             background-repeat: no-repeat;
         }
+
         .sa_bar {
             display: inline-block;
             width: 1px;
@@ -216,6 +229,7 @@
             background-color: #e4e8eb;
             vertical-align: -2px;
         }
+
         #main {
             height: 9999px;
             background-color: gray;
@@ -225,6 +239,7 @@
             margin: 0;
             display: flex;
         }
+
         #header-search form:focus-within {
             box-shadow: 0 4px 9px 0 rgba(0, 0, 0, .05);
         }
@@ -238,6 +253,7 @@
             background-color: #fff;
 
         }
+
         #header-search-input {
             padding: 13px 15px;
             outline: none;
@@ -253,7 +269,7 @@
 </head>
 
 <body>
-    <div id="header">
+    <header id="header">
         <div id="header-center">
             <div id="header-logo">
                 <a href="#">
@@ -282,8 +298,197 @@
                 <a href="#"><span class="blind">해피빈</span></a>
             </div>
         </div>
-        <div id="main"></div>
-    </div>
+    </header>
+    <style>
+        #nav {
+            display: flex;
+            height: 52px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12);
+            justify-content: center;
+        }
+        #nav-center {
+            display: flex;
+            width: 1130px;
+        }
+
+        #nav-left {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        #nav-left a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #nav-left i {
+            background-image: url(./sp_main.png);
+            background-size: 442px 428px;
+            background-repeat: no-repeat;
+        }
+
+        #nav-left .mail {
+            display: inline-block;
+            margin-right: 4px;
+            vertical-align: -3px;
+            width: 21px;
+            height: 21px;
+            background-position: -420px -73px;
+            background-repeat: no-repeat;
+        }
+
+        #nav-left .shoping {
+            display: inline-block;
+            width: 24px;
+            height: 20px;
+            background-position: -76px -386px;
+            background-repeat: no-repeat;
+        }
+
+        #nav-left .shopinglive {
+            display: inline-block;
+            width: 54px;
+            height: 20px;
+            line-height: 20px;
+            background-position: -209px -267px;
+            background-repeat: no-repeat;
+        }
+
+        #nav-left .tv {
+            display: inline-block;
+            width: 12px;
+            height: 14px;
+            background-position: -256px -212px;
+            background-repeat: no-repeat;
+        }
+        #nav-left ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        #nav-left li {
+            display: flex;
+            list-style: none;
+            margin-right: 12px;
+            font-size: 15px;
+            line-height: 30px;
+            font-weight: 700;
+            color: #000;
+            letter-spacing: -.3px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #nav-left a:visited {
+            color: black;
+        }
+
+        #nav-left .green {
+            color: #03c75a;
+        }
+        #nav-left .more:hover {
+            text-decoration: underline;
+        }
+        #nav-left .more {
+            margin-left: 17px;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 30px;
+            color: #202020;
+        }
+        #nav-left .more::after {
+            background-image : url(./sp_main.png);
+            background-size: 442px 428px;
+            display: inline-block;
+            width: 11px;
+            height: 7px;
+            background-position: -350px -310px;
+            background-repeat: no-repeat;
+            content: '';
+        }
+        #nav-right {}
+    </style>
+    <nav id="nav">
+        <div id="nav-center">
+            <div id="nav-left">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="mail"></i>
+                            <span class="green">메일</span>
+                        </a>
+                    </li>
+                    <li> <a href="#">
+                            <span class="green">카페</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <span class="green">블로그</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <span class="green">지식iN</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <i class="shoping"></i>
+                            <span class="blind">쇼핑</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <i class="shopinglive"></i>
+                            <span class="blind">쇼핑LIVE</span>
+                        </a></li>
+                    <li>
+                        <a href="#">
+                            <span class="green">Pay</span>
+                        </a>
+                    </li>
+                    <li> <a href="#">
+                            <i class="tv"></i>
+                            <span class="green">TV</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <span>사전</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <span>뉴스</span>
+                        </a></li>
+                    <li>
+                        <a href="#">
+                            <span>증권</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>부동산</span>
+                        </a>
+                    </li>
+                    <li> <a href="#">
+                            <span>지도</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <span>VIBE</span>
+                        </a></li>
+                    <li>
+                        <a href="#">
+                            <span>도서</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>웹툰</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="more">더보기</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="nav-right"></div>
+        </div>
+    </nav>
+    <main id="main"></main>
+    <footer id="footer"></footer>
 </body>
 
 </html>
