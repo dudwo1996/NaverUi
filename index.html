@@ -306,6 +306,7 @@
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12);
             justify-content: center;
         }
+
         #nav-center {
             display: flex;
             width: 1130px;
@@ -362,11 +363,13 @@
             background-position: -256px -212px;
             background-repeat: no-repeat;
         }
+
         #nav-left ul {
             display: flex;
             padding: 0;
             margin: 0;
         }
+
         #nav-left li {
             display: flex;
             list-style: none;
@@ -387,9 +390,11 @@
         #nav-left .green {
             color: #03c75a;
         }
+
         #nav-left .more:hover {
             text-decoration: underline;
         }
+
         #nav-left .more {
             margin-left: 17px;
             font-size: 13px;
@@ -397,8 +402,9 @@
             line-height: 30px;
             color: #202020;
         }
+
         #nav-left .more::after {
-            background-image : url(./sp_main.png);
+            background-image: url(./sp_main.png);
             background-size: 442px 428px;
             display: inline-block;
             width: 11px;
@@ -407,7 +413,170 @@
             background-repeat: no-repeat;
             content: '';
         }
-        #nav-right {}
+
+        #nav-more .popup {
+            display: none;
+            position: absolute;
+            width: 372px;
+            padding: 16px 19px;
+            border: 1px solid #101010;
+            background-color: #fff;
+            border-radius: 4px;
+            letter-spacing: -.3px;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .06);
+            left: -310px;
+            top: 33px;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000;
+        }
+
+        #nav-more .popup:before {
+            background-image: url(./sp_main.png);
+            background-size: 442px 428px;
+            display: inline-block;
+            position: absolute;
+            width: 20px;
+            height: 11px;
+            /* left: 134px; */
+            right: 14px;
+            top: -11px;
+            content: '';
+            background-position: -250px -310px;
+        }
+
+        #nav-more:hover .popup {
+            display: inline-block;
+        }
+
+        #nav-more {
+            position: relative;
+        }
+
+        #nav-more .popup h6 {
+            margin: 0;
+            font-weight: 800;
+            font-size: 14px;
+            color: #000;
+            line-height: 17px;
+        }
+
+        #nav-more p {
+            margin: 0;
+            margin-top: 5px;
+            font-size: 13px;
+            line-height: 20px;
+            color: #202020;
+            font-weight: 500;
+        }
+
+        #nav-more .popup div::before {
+            background-image: url(./sp_main.png);
+            background-size: 442px 428px;
+            display: inline-block;
+            width: 26px;
+            height: 17px;
+            background-position: -102px -386px;
+            font-size: 13px;
+            content: '';
+        }
+
+        #nav-more .popup div::after {
+            background-image: url(./sp_main.png);
+            background-size: 442px 428px;
+            display: inline-block;
+            width: 8px;
+            height: 12px;
+            background-position: -408px -136px;
+            font-size: 13px;
+            content: '';
+        }
+
+        #nav-more .popup div {
+            margin-top: 5px;
+            font-size: 13px;
+            line-height: 17px;
+            color: #03c75a;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        #nav-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #nav-weather{
+            display: flex;
+            justify-content: center;
+            align-items: center 
+        }
+
+        #nav-mise .smile {
+            background-image: url(./sp_weather.11654bc0.png);
+            display: inline-block;
+            background-size: 641px 587px;
+            background-position: 0px -522px;
+            background-repeat: no-repeat;
+            width: 32px;
+            height: 32px;
+        }
+
+        #nav-weather .sun {
+            background-image: url(./sp_weather.11654bc0.png);
+            display: inline-block;
+            background-size: 641px 587px;
+            background-position: 0px -522px;
+            background-repeat: no-repeat;
+            width: 32px;
+            height: 32px;
+            margin-right: 9px;
+        }
+
+        #nav-mise .bold {
+            font-size: 13px;
+            color: #202020;
+            font-weight: blod;
+            margin-left: 5px;
+        }
+
+        #nav-weather .big {
+            font-weight: bold;
+            color: rgb(32, 32, 32);
+            font-size: 15px;
+            margin-right: 9px;
+        }
+
+        #nav-weather .blue {
+            color: rgb(37, 134, 248);
+            margin-left: 9px;
+            font: 13px;
+        }
+
+        #nav-weather .red {
+            color: rgb(233, 86, 74);
+            font: 13px;
+
+        }
+
+        #nav-weather .grey{
+            font-size: 12px;
+            color: rgb(120, 120, 120);
+            margin-left: 9px;
+        }
+
+        #nav-weather .slash{
+            background-image: url(./sp_main.png);
+            background-size: 442px 428px;
+            background-position: -437px -182px;
+            display: inline-block;
+            background-repeat: no-repeat;
+            width: 5px;
+            height: 11px;
+            margin-right: 0 3px;
+        }
+
     </style>
     <nav id="nav">
         <div id="nav-center">
@@ -477,14 +646,30 @@
                             <span>웹툰</span>
                         </a>
                     </li>
-                    <li>
+                    <li id="nav-more">
                         <a href="#">
                             <span class="more">더보기</span>
                         </a>
+                        <div class="popup">
+                            <h6>'서비스 바로가기'에 중요한 공지가 있어요.</h6>
+                            <p>5월 17일부터 모바일에서 사용하던 바로가기가 PC 메인 상단에 제공될 예정이에요. 이제 PC에서도 모바일에서 제공되는 네이버 서비스와 사이트 바로가기를 사용할
+                                수 있어요.</p>
+                            <div>새로운 PC메인 보러가기</div>
+                        </div>
                     </li>
                 </ul>
             </div>
-            <div id="nav-right"></div>
+            <div id="nav-right">
+                <div id="nav-weather">
+                    <i class="sun"></i>
+                    <div class="big">19.0℃</div>
+                    <div class="bold">맑음</div>
+                    <div class="blue">9.0℃</div>
+                    <i class="slash"></i>
+                    <div class="red">22.0℃</div>
+                    <div class="grey">압구정동</div>
+                </div>
+            </div>
         </div>
     </nav>
     <main id="main"></main>
